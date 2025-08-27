@@ -1,0 +1,57 @@
+ ## Calculus Concepts: Limits and Tangents
+
+Today's lecture focused on the fundamental concepts of limits and the trigonometric tangent function, with a particular emphasis on their graphical representations and real-world applications.
+
+### Limits: Approaching Infinity and Oscillatory Behavior
+
+We began by revisiting the concept of limits – the behavior of a function as its input approaches a certain value. We discussed how limits can approach positive or negative infinity, indicating that the function's output grows or shrinks without bound.
+
+A key example was provided: the function \(f(x) = \frac{1}{x-1}\). We analyzed its behavior as \(x\) approached 2 from the left and right, demonstrating that the limit approaches positive and negative infinity, respectively. This illustrates a function with an infinite limit.
+
+We also examined a graph exhibiting oscillatory behavior near \(x = 0\). This behavior suggests that the function's values are rapidly changing between negative and positive values as \(x\) gets very close to zero. This is a characteristic of functions involving trigonometric terms like sine and cosine.
+
+### The Tangent Function: Asymptotic Behavior
+
+The tangent function, \(tan(x) = \frac{sin(x)}{cos(x)}\), was discussed in detail. We explored its relationship to right triangles and its behavior as angles approach certain values.
+
+A crucial point was made regarding the tangent function's asymptotic behavior. As the angle approaches \(270^\circ\) (or \(\frac{3\pi}{2}\) radians), the tangent function becomes very large or positive infinity. Conversely, as the angle approaches \(90^\circ\) (or \(\frac{\pi}{2}\) radians) from the left and negative angles close to \(270^\circ\), the tangent function approaches negative infinity.
+
+We also touched upon the real-world applications of the tangent function, such as calculating slopes of curves and analyzing vibrations. In physics, tangents are essential for understanding velocity components along a curve.
+
+### Graph Interpretation and Key Concepts
+
+Throughout the lecture, emphasis was placed on interpreting graphs and understanding the relationship between function limits and their graphical representations. We highlighted the importance of considering limits from both the left and right sides to fully understand the function's behavior at a specific point.
+
+The concept of a vertical asymptote was also briefly mentioned, which occurs when the limit of a function approaches infinity as the input approaches a certain value.
+
+### Conclusion
+
+Today's lecture provided a solid foundation in the concepts of limits and the tangent function. Understanding these concepts is crucial for analyzing the behavior of functions, interpreting graphs, and applying mathematical models to real-world problems. The ability to analyze limits and the asymptotic behavior of functions like the tangent is fundamental to further study in calculus and related fields.## Calculus Concepts: Limits and Tangents
+
+Today's lecture focused on the fundamental concepts of limits and the trigonometric tangent function, with a particular emphasis on their graphical representations and real-world applications.
+
+### Limits: Approaching Infinity and Oscillatory Behavior
+
+We began by revisiting the concept of limits – the behavior of a function as its input approaches a certain value. We discussed how limits can approach positive or negative infinity, indicating that the function's output grows or shrinks without bound.
+
+A key example was provided: the function \(f(x) = \frac{1}{x-1}\). We analyzed its behavior as \(x\) approached 2 from the left and right, demonstrating that the limit approaches positive and negative infinity, respectively. This illustrates a function with an infinite limit.
+
+We also examined a graph exhibiting oscillatory behavior near \(x = 0\). This behavior suggests that the function's values are rapidly changing between negative and positive values as \(x\) gets very close to zero. This is a characteristic of functions involving trigonometric terms like sine and cosine.
+
+### The Tangent Function: Asymptotic Behavior
+
+The tangent function, \(tan(x) = \frac{sin(x)}{cos(x)}\), was discussed in detail. We explored its relationship to right triangles and its behavior as angles approach certain values.
+
+A crucial point was made regarding the tangent function's asymptotic behavior. As the angle approaches \(270^\circ\) (or \(\frac{3\pi}{2}\) radians), the tangent function becomes very large or positive infinity. Conversely, as the angle approaches \(90^\circ\) (or \(\frac{\pi}{2}\) radians) from the left and negative angles close to \(270^\circ\), the tangent function approaches negative infinity.
+
+We also touched upon the real-world applications of the tangent function, such as calculating slopes of curves and analyzing vibrations. In physics, tangents are essential for understanding velocity components along a curve.
+
+### Graph Interpretation and Key Concepts
+
+Throughout the lecture, emphasis was placed on interpreting graphs and understanding the relationship between function limits and their graphical representations. We highlighted the importance of considering limits from both the left and right sides to fully understand the function's behavior at a specific point.
+
+The concept of a vertical asymptote was also briefly mentioned, which occurs when the limit of a function approaches infinity as the input approaches a certain value.
+
+### Conclusion
+
+Today's lecture provided a solid foundation in the concepts of limits and the tangent function. Understanding these concepts is crucial for analyzing the behavior of functions, interpreting graphs, and applying mathematical models to real-world problems. The ability to analyze limits and the asymptotic behavior of functions like the tangent is fundamental to further study in calculus and related fields.

@@ -1,0 +1,336 @@
+## String Manipulation in Python
+
+**Review:** We've established that a `string` in Python is a sequence of characters. We can treat strings as sequences and apply various operations to them.
+
+**Character Access (Indexing):**
+
+*   Individual characters within a string can be accessed using **indexing**.
+*   Python uses **zero-based indexing**, meaning the first character in a string has an index of 0, the second has an index of 1, and so on.
+*   **Syntax:** `string[index]`
+*   **Important Note:** Attempting to access an index that is out of range (too large or too small) will result in an `IndexError`.
+*   **Negative Indexing:** Python allows negative indexing, where `-1` refers to the last character, `-2` to the second-to-last, and so on. This is a convenient way to access characters from the end of the string without needing to calculate the length.
+
+**String Slicing:**
+
+*   **Slicing** is a way to extract a portion (a substring) of a string.
+*   **Syntax:** `string[start:stop:step]`
+    *   **start:** The index where the substring begins (inclusive). If omitted, it defaults to 0 (the beginning of the string).
+    *   **stop:** The index where the substring ends (exclusive). The substring will not include the character at this index. If omitted, it defaults to the end of the string.
+    *   **step:** The increment between characters in the substring. If omitted, it defaults to 1 (taking consecutive characters).
+*   **Examples:**
+    *   `string[1:5]` extracts characters from index 1 up to (but not including) index 5.
+    *   `string[:5]` extracts characters from the beginning up to (but not including) index 5.
+    *   `string[2:]` extracts characters from index 2 to the end of the string.
+    *   `string[::2]` extracts every other character.
+    *   `string[::-1]` reverses the string.
+
+**Assignment Statement:**
+
+You can indeed include assignment statements within your code. For example:
+
+```python
+my_string = "Hello"
+char_at_index_1 = my_string[1]  # char_at_index_1 will be 'e'
+substring = my_string[1:4]     # substring will be "ell"
+```
+
+These statements are used to create variables and store the results of expressions or operations.
+## String Manipulation in Python (Continued)
+
+**Review:** We've established that a `string` in Python is a sequence of characters. We can treat strings as sequences and apply various operations to them.
+
+**Character Access (Indexing):**
+* Individual characters within a string can be accessed using **indexing**.
+* Python uses **zero-based indexing**, meaning the first character in a string has an index of 0, the second has an index of 1, and so on.
+* **Syntax:** `string[index]`
+* **Important Note:** Attempting to access an index that is out of range (too large or too small) will result in an `IndexError`.
+* **Negative Indexing:** Python allows negative indexing, where `-1` refers to the last character, `-2` to the second-to-last, and so on. This is a convenient way to access characters from the end of the string without needing to calculate the length.
+
+**String Slicing:**
+* **Slicing** is a way to extract a portion (a substring) of a string.
+* **Syntax:** `string[start:stop:step]`
+    * **start:** The index where the substring begins (inclusive). If omitted, it defaults to 0 (the beginning of the string).
+    * **stop:** The index where the substring ends (exclusive). The substring will not include the character at this index. If omitted, it defaults to the end of the string.
+    * **step:** The increment between characters in the substring. If omitted, it defaults to 1 (taking consecutive characters).
+* **Examples:**
+    * `string[1:5]` extracts characters from index 1 up to (but not including) index 5.
+    * `string[:5]` extracts characters from the beginning up to (but not including) index 5.
+    * `string[2:]` extracts characters from index 2 to the end of the string.
+    * `string[::2]` extracts every other character.
+    * `string[::-1]` reverses the string.
+
+**Assignment Statement:**
+You can indeed include assignment statements within your code. For example:
+```python
+my_string = "Hello"
+char_at_index_1 = my_string[1] # char_at_index_1 will be 'e'
+substring = my_string[1:4]    # substring will be "ell"
+```
+These statements are used to create variables and store the results of expressions or operations.
+
+**String Slicing with Step and Negative Indices:**
+
+Now, let's delve deeper into the possibilities within the square brackets of string slicing. You'll find that combining different numbers within the `start`, `stop`, and `step` parameters allows for a wide range of substring extraction. For now, it's a good practice to always include a `start`, `stop`, and `step`, even if you intend to take the entire string.
+
+* **Positive Step:** When the `step` is positive (or omitted, defaulting to 1), the slicing proceeds from left to right, taking consecutive characters.
+    * Example: `string[3:6]` (where `string` is "ABCD..."): This will extract characters starting from index 3 up to (but not including) index 6, resulting in 'D' and 'F'.
+    * Example: `string[:6]` (where `string` is "ABCD..."): This will extract characters from the beginning up to (but not including) index 6, resulting in 'A', 'B', 'C', 'D', 'E', 'F'.
+    * Example: `string[3:]` (where `string` is "ABCD..."): This will extract characters starting from index 3 to the end of the string, resulting in 'D', 'F', 'G', 'H', ...
+    * Example: `string[::2]` (where `string` is "ABCD..."): This will extract every other character, starting from the beginning, resulting in 'A', 'C', 'E', 'G', ...
+
+* **Negative Step:** When the `step` is negative, the slicing proceeds from right to left.
+    * Example: `string[3:6: -1]` (where `string` is "ABCD..."): This will extract characters starting from index 3 and going backwards towards the beginning, up to (but not including) index 6. This results in 'D' and 'F'.
+    * Example: `string[::-1]` (where `string` is "ABCD..."): This is a shorthand for reversing the entire string. It effectively uses a negative step of -1.
+
+* **Omitting `start` and `stop`:**
+    * `string[::]` (or just `string[:]`) creates a copy of the entire string.
+    * `string[::2]` extracts every other character, starting from the beginning.
+    * `string[::2:2]` extracts every other character, starting from the beginning, and stops at the second character (effectively taking every other character).
+
+**Practice Tip:** The best way to understand string slicing is to experiment with different examples in your Python interpreter. Try different combinations of `start`, `stop`, and `step` values with various strings to see the results firsthand.
+
+**Example Scenario:**
+
+Consider the string `S = "ABCDEFG"`.
+
+* `S[2:5]` will result in `"CDE"`.
+* `S[:3]` will result in `"ABC"`.
+* `S[4:]` will result in `"DEFG"`.
+* `S[::2]` will result in `"ACEG"`.
+* `S[::-1]` will result in `"GFEDCBA"`.
+* `S[2:6:2]` will result in `"CE"`.
+
+By practicing these slicing techniques, you'll gain a strong understanding of how to extract and manipulate portions of strings in Python.
+## String Manipulation in Python
+
+**Review:** We've established that a `string` in Python is a sequence of characters. We can treat strings as sequences and apply various operations to them.
+
+**Character Access (Indexing):**
+* Individual characters within a string can be accessed using **indexing**.
+* Python uses **zero-based indexing**, meaning the first character in a string has an index of 0, the second has an index of 1, and so on.
+* **Syntax:** `string[index]`
+* **Important Note:** Attempting to access an index that is out of range (too large or too small) will result in an `IndexError`.
+* **Negative Indexing:** Python allows negative indexing, where `-1` refers to the last character, `-2` to the second-to-last, and so on. This is a convenient way to access characters from the end of the string without needing to calculate the length.
+
+**String Slicing:**
+* **Slicing** is a way to extract a portion (a substring) of a string.
+* **Syntax:** `string[start:stop:step]`
+    * **start:** The index where the substring begins (inclusive). If omitted, it defaults to 0 (the beginning of the string).
+    * **stop:** The index where the substring ends (exclusive). The substring will not include the character at this index. If omitted, it defaults to the end of the string.
+    * **step:** The increment between characters in the substring. If omitted, it defaults to 1 (taking consecutive characters).
+* **Examples:**
+    * `string[1:5]` extracts characters from index 1 up to (but not including) index 5.
+    * `string[:5]` extracts characters from the beginning up to (but not including) index 5.
+    * `string[2:]` extracts characters from index 2 to the end of the string.
+    * `string[::2]` extracts every other character.
+    * `string[::-1]` reverses the string.
+
+**Assignment Statement:**
+You can indeed include assignment statements within your code. For example:
+```python
+my_string = "Hello"
+char_at_index_1 = my_string[1] # char_at_index_1 will be 'e'
+substring = my_string[1:4]   # substring will be "ell"
+```
+These statements are used to create variables and assign values to them.
+
+---
+
+## Additional Notes: Strings, Input, and Branching
+
+**Immutability of Strings:**
+
+It's important to understand that strings in Python are **immutable**. This means that once a string is created, its content cannot be changed directly. When you appear to modify a string (e.g., by changing a character), Python doesn't alter the original string in memory. Instead, it creates a *new* string with the desired modifications and reassigns the variable to point to this new string.
+
+For example:
+
+```python
+my_string = "Hello"
+print(my_string)  # Output: Hello
+
+my_string[0] = 'J'  # Attempting to change the first character
+print(my_string)  # Output: Hello (the original string remains unchanged)
+
+my_string = "Jello" # A new string is created and my_string is reassigned
+print(my_string) # Output: Jello
+```
+
+This immutability has implications for how strings are handled and can be important to consider in larger programs.
+
+**Input:**
+
+To interact with users and provide dynamic content, Python offers functions to take input from the user. The most common function for this is `input()`.
+
+```python
+name = input("Please enter your name: ")
+print("Hello, " + name + "!")
+```
+
+The `input()` function prompts the user to enter text, and the entered text is returned as a string.
+
+**Branching:**
+
+Conditional statements allow your program to execute different blocks of code based on whether a certain condition is true or false. The primary branching construct in Python is the `if`, `elif` (else if), and `else` statement.
+
+```python
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are an adult.")
+elif age >= 13:
+    print("You are a teenager.")
+else:
+    print("You are a child.")
+```
+
+In this example, the program checks the user's age and prints a corresponding message. The `if` statement checks the first condition, and if it's false, it proceeds to the next `elif` condition, and so on. The `else` block is executed if none of the preceding conditions are true.
+
+**Connecting Concepts:**
+
+These concepts often work together. For instance, you might take string input from the user and then use string slicing or manipulation to process it. You could also use branching to determine how to handle different string inputs.
+
+**Example Scenario:**
+
+Imagine a program that asks the user for their name and age. It then uses branching to determine whether they are eligible for a discount.
+
+```python
+name = input("Please enter your name: ")
+age = int(input("Enter your age: "))
+
+if age >= 65:
+    print(f"Hello, {name}! You are eligible for a senior discount.")
+elif age >= 18:
+    print(f"Hello, {name}! Welcome! You can enjoy our regular prices.")
+else:
+    print(f"Hello, {name}! Come back when you're a little older.")
+```
+
+By understanding strings, input, and branching, you'll be well-equipped to create more interactive and dynamic Python programs.
+## String, Input, and Branching in Python
+
+**Review:** We've established that a `string` in Python is a sequence of characters. We can treat strings as sequences and apply various operations to them, including accessing individual characters, extracting substrings using slicing, and performing assignments.
+
+**Character Access (Indexing):**
+* Individual characters within a string can be accessed using **indexing**.
+* Python uses **zero-based indexing**, meaning the first character in a string has an index of 0, the second has an index of 1, and so on.
+* **Syntax:** `string[index]`
+* **Important Note:** Attempting to access an index that is out of range (too large or too small) will result in an `IndexError`.
+* **Negative Indexing:** Python allows negative indexing, where `-1` refers to the last character, `-2` to the second-to-last, and so on. This is a convenient way to access characters from the end of the string without needing to calculate the length.
+
+**String Slicing:**
+* **Slicing** is a way to extract a portion (a substring) of a string.
+* **Syntax:** `string[start:stop:step]`
+   * **start:** The index where the substring begins (inclusive). If omitted, it defaults to 0 (the beginning of the string).
+   * **stop:** The index where the substring ends (exclusive). The substring will not include the character at this index. If omitted, it defaults to the end of the string.
+   * **step:** The increment between characters in the substring. If omitted, it defaults to 1 (taking consecutive characters).
+* **Examples:**
+   * `string[1:5]` extracts characters from index 1 up to (but not including) index 5.
+   * `string[:5]` extracts characters from the beginning up to (but not including) index 5.
+   * `string[2:]` extracts characters from index 2 to the end of the string.
+   * `string[::2]` extracts every other character.
+   * `string[::-1]` reverses the string.
+
+**Assignment Statement:**
+You can indeed include assignment statements within your code. For example:
+```python
+my_string = "Hello"
+char_at_index_1 = my_string[1] # char_at_index_1 will be 'e'
+substring = my_string[1:4]   # substring will be "ell"
+```
+These statements are used to create variables and store the results of expressions or operations.
+
+**String Slicing with Step and Negative Indices:**
+Now, let's delve deeper into the possibilities within the square brackets of string slicing. Combining different numbers within the `start`, `stop`, and `step` parameters allows for a wide range of substring extraction. For now, it's a good practice to always include a `start`, `stop`, and `step`, even if you intend to take the entire string.
+* **Positive Step:** When the `step` is positive (or omitted, defaulting to 1), the slicing proceeds from left to right, taking consecutive characters.
+   * Example: `string[3:6]` (where `string` is "ABCD...") will extract characters starting from index 3 up to (but not including) index 6, resulting in 'D' and 'F'.
+   * Example: `string[:6]` (where `string` is "ABCD...") will extract characters from the beginning up to (but not including) index 6, resulting in 'A', 'B', 'C', 'D', 'E', 'F'.
+   * Example: `string[3:]` (where `string` is "ABCD...") will extract characters starting from index 3 to the end of the string, resulting in 'D', 'F', 'G', 'H', ...
+   * Example: `string[::2]` (where `string` is "ABCD...") will extract every other character, starting from the beginning, resulting in 'A', 'C', 'E', 'G', ...
+* **Negative Step:** When the `step` is negative, the slicing proceeds from right to left.
+   * Example: `string[3:6:-1]` (where `string` is "ABCD...") will extract characters starting from index 3 and going backwards towards the beginning, up to (but not including) index 6. This results in 'D' and 'F'.
+   * Example: `string[::-1]` (where `string` is "ABCD...") is a shorthand for reversing the entire string. It effectively uses a negative step of -1.
+* **Omitting `start` and `stop`:**
+   * `string[::]` (or just `string[:]`) creates a copy of the entire string.
+   * `string[::2]` extracts every other character, starting from the beginning.
+   * `string[::2:2]` extracts every other character, starting from the beginning, and stops at the second character (effectively taking every other character).
+
+**Practice Tip:** The best way to understand string slicing is to experiment with different examples in your Python interpreter. Try different combinations of `start`, `stop`, and `step` values with various strings to see the results firsthand.
+
+**Example Scenario:**
+Consider the string `S = "ABCDEFG"`.
+* `S[2:5]` will result in `"CDE"`.
+* `S[:3]` will result in `"ABC"`.
+* `S[4:]` will result in `"DEFG"`.
+* `S[::2]` will result in `"ACEG"`.
+* `S[::-1]` will result in `"GFEDCBA"`.
+* `S[2:6:2]` will result in `"CE"`.
+
+By practicing these slicing techniques, you'll gain a strong understanding of how to extract and manipulate portions of strings in Python.
+
+---
+
+## Input, Output, and Branching
+
+**Review:** We've explored string manipulation, including accessing characters, extracting substrings, and performing assignments. Now, let's move on to how programs interact with users through input and output, and how we can create programs that make decisions using branching.
+
+**Input:**
+To get information from the user, we use the `input()` function. This function displays a prompt to the user, waits for them to type something and press Enter, and then returns what the user typed as a string.
+
+**Syntax:** `input(prompt)`
+* `prompt` (optional): A string that is displayed to the user before they enter input.
+
+**Example:**
+```python
+name = input("Please enter your name: ")
+print("Hello, " + name + "!")
+```
+In this example, the program will first display "Please enter your name: " to the user. Whatever the user types will be stored in the `name` variable, and then the program will print a greeting using the entered name.
+
+**Output:**
+To display information to the user, we use the `print()` function. This function takes one or more arguments and displays them on the console.
+
+**Syntax:** `print(object(s), sep=' ', end='\n', file=sys.stdout, flush=False)`
+* `object(s)`: The values you want to display. These can be strings, numbers, or any other Python objects.
+* `sep` (optional): The separator between the objects (default is a space).
+* `end` (optional): What is printed at the end of the output (default is a newline character `\n`).
+* `file` (optional): The output stream (default is the console).
+* `flush` (optional): Whether to force the output to be displayed immediately (default is `False`).
+
+**Example:**
+```python
+x = 10
+y = 5
+print("The sum of", x, "and", y, "is", x + y)
+print("This is the first line.", end=" ")
+print("This is the second line.")
+```
+This example demonstrates how to print multiple objects with a specified separator and how to control the newline character at the end of the output.
+
+**Branching:**
+Branching allows a program to make decisions based on whether a certain condition is true or false. The most common way to implement branching in Python is using `if`, `elif` (else if), and `else` statements.
+
+**Syntax:**
+
+```python
+if condition:
+    # Code to execute if the condition is true
+elif another_condition:
+    # Code to execute if another_condition is true
+else:
+    # Code to execute if none of the above conditions are true
+```
+
+**Example:**
+```python
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are an adult.")
+elif age >= 13:
+    print("You are a teenager.")
+else:
+    print("You are a child.")
+```
+In this example, the program prompts the user for their age and then uses `if`, `elif`, and `else` statements to determine whether they are an adult, teenager, or child. The `int()` function is used to convert the user's input (which is initially a string) into an integer.
+
+These fundamental concepts of input, output, and branching are essential for writing interactive and dynamic Python programs. They allow programs to respond to user actions and make different decisions based on various conditions.

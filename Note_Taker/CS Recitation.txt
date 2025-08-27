@@ -1,0 +1,209 @@
+## CS Recitation Notes - String Manipulation
+
+**Key Concepts:**
+
+* **String Input:** When you receive input from a user (e.g., using `input()` in Python or similar functions in other languages), it is *always* returned as a string.
+* **Type Conversion (Type Inversion):** If you need to perform numerical operations on a string that contains a number, you must use a type conversion function (like `int()` in Python) to convert the string into an integer.
+    * **Important:** If the string cannot be converted to an integer (e.g., it contains letters or special characters), a `ValueError` or similar type error will occur.
+* **String Indexing:** You can access individual characters within a string using integer indices.
+    * **Positive Indices:** Start from 0 and represent characters from the beginning of the string.
+    * **Negative Indices:** Start from -1 and represent characters from the end of the string.
+        * -1 refers to the last character, -2 to the second-to-last, and so on.
+* **String Slicing:** A powerful way to extract portions of a string. It uses the syntax `[start:stop:step]`.
+    * **`start` (inclusive):** The index where the slice begins. If omitted, it defaults to 0 (the beginning of the string).
+    * **`stop` (exclusive):** The index where the slice ends. Characters at this index are *not* included in the slice. If omitted, it defaults to the length of the string (the end).
+    * **`step`:** The increment between indices in the slice. If omitted, it defaults to 1 (moving forward one character at a time).
+        * **Positive `step`:** Iterates through the string forward.
+        * **Negative `step`:** Iterates through the string backward.
+* **Special String Value:** `\s` represents a whitespace character (like a space, tab, or newline).
+
+**Examples:**
+
+* **Type Conversion:**
+    ```
+    string = "42"
+    integer = int(string)  # integer will be 42
+    ```
+    ```
+    string = "hello"
+    integer = int(string)  # This will raise a ValueError
+    ```
+* **Indexing:**
+    ```
+    string = "world"
+    first_char = string[0]  # first_char will be 'w'
+    last_char = string[-1]   # last_char will be 'd'
+    ```
+* **Slicing:**
+    ```
+    string = "abcdefg"
+    substring1 = string[0:3]  # substring1 will be "abc" (index 0 up to but not including 3)
+    substring2 = string[4:]    # substring2 will be "efg" (from index 4 to the end)
+    substring3 = string[:3]    # substring3 will be "abc" (from the beginning up to but not including index 3)
+    substring4 = string[-3:]   # substring4 will be "efg" (last three characters)
+    substring5 = string[::2]   # substring5 will be "aceg" (every second character)
+    substring6 = string[1:5:2] # substring6 will be "bdf" (from index 1 to 4, every second character)
+    substring7 = string[::-1]  # substring7 will be "gfedcba" (reversed string)
+    ```
+
+**Further Exploration:**
+
+* Experiment with different combinations of `start`, `stop`, and `step` in string slicing.
+* Consider how string manipulation can be used to extract specific information from user input.
+* Think about the potential errors that can occur during string manipulation (e.g., `ValueError` during type conversion, `IndexError` with invalid slicing ranges).
+## CS Recitation Notes - String Manipulation (with Additional Insights)
+
+**Key Concepts:**
+
+* **String Input:** When you receive input from a user (e.g., using `input()` in Python or similar functions in other languages), it is *always* returned as a string.
+* **Type Conversion (Type Inversion):** If you need to perform numerical operations on a string that contains a number, you must use a type conversion function (like `int()` in Python) to convert the string into an integer.
+    * **Important:** If the string cannot be converted to an integer (e.g., it contains letters or special characters), a `ValueError` or similar type error will occur.
+* **String Indexing:** You can access individual characters within a string using integer indices.
+    * **Positive Indices:** Start from 0 and represent characters from the beginning of the string.
+    * **Negative Indices:** Start from -1 and represent characters from the end of the string.
+        * -1 refers to the last character, -2 to the second-to-last, and so on.
+* **String Slicing:** A powerful way to extract portions of a string. It uses the syntax `[start:stop:step]`.
+    * **`start` (inclusive):** The index where the slice begins. If omitted, it defaults to 0 (the beginning of the string).
+    * **`stop` (exclusive):** The index where the slice ends. Characters at this index are *not* included in the slice. If omitted, it defaults to the length of the string (the end).
+    * **`step`:** The increment between indices in the slice. If omitted, it defaults to 1 (moving forward one character at a time).
+        * **Positive `step`:** Iterates through the string forward.
+        * **Negative `step`:** Iterates through the string backward.
+* **Special String Value:** `\s` represents a whitespace character (like a space, tab, or newline).
+
+**Examples:**
+
+* **Type Conversion:**
+   ```
+   string = "42"
+   integer = int(string) # integer will be 42
+   ```
+   ```
+   string = "hello"
+   integer = int(string) # This will raise a ValueError
+   ```
+* **Indexing:**
+   ```
+   string = "world"
+   first_char = string[0] # first_char will be 'w'
+   last_char = string[-1]  # last_char will be 'd'
+   ```
+* **Slicing:**
+   ```
+   string = "abcdefg"
+   substring1 = string[0:3] # substring1 will be "abc" (index 0 up to but not including 3)
+   substring2 = string[4:]   # substring2 will be "efg" (from index 4 to the end)
+   substring3 = string[:3]   # substring3 will be "abc" (from the beginning up to but not including index 3)
+   substring4 = string[-3:]  # substring4 will be "efg" (last three characters)
+   substring5 = string[::2]  # substring5 will be "aceg" (every second character)
+   substring6 = string[1:5:2] # substring6 will be "bdf" (from index 1 to 4, every second character)
+   substring7 = string[::-1] # substring7 will be "gfedcba" (reversed string)
+   ```
+
+**Further Exploration:**
+
+* Experiment with different combinations of `start`, `stop`, and `step` in string slicing.
+* Consider how string manipulation can be used to extract specific information from user input.
+* Think about the potential errors that can occur during string manipulation (e.g., `ValueError` during type conversion, `IndexError` with invalid slicing ranges).
+
+---
+
+**Additional Notes from Class (Wednesday, August 27, 2025):**
+
+**String Length:** Python has a built-in function `len()` that returns the number of characters in a string.
+
+**Immutability:** Strings in Python are *immutable*. This means you cannot directly modify a string in place. Operations that appear to modify a string actually create a *new* string.
+
+**Building New Strings:** To effectively "modify" or build a new string, you typically use string concatenation or slicing combined with string addition.
+
+**Substring Checking:** The `in` keyword can be used to check if a string contains a specific substring. For example, `"world" in "hello world"` evaluates to `True`.
+
+**String Concatenation:**  Unlike some other languages, Python does not automatically convert non-string types to strings during concatenation. You need to explicitly convert numbers or other data types to strings using `str()` before concatenating.
+
+**Format Strings (f-strings):** A convenient way to embed expressions inside string literals for formatting. They are denoted by an `f` before the opening quote. Variables and expressions within the curly braces `{}` are evaluated and their string representation is inserted into the string. This is often preferred over older methods like `%` formatting.
+
+**Example of Format String:**
+
+```python
+age = 18
+name = "Alice"
+message = f"My name is {name} and I am {age} years old."
+print(message)  # Output: My name is Alice and I am 18 years old.
+```
+
+**Important Note on Immutability and Modification:** If you need to change a string, you cannot directly modify it. Instead, you'll need to create a new string by slicing the original and adding the desired changes using concatenation or slicing.
+
+**Example of Indirect Modification:**
+
+```python
+my_string = "hello"
+# my_string[0] = 'J'  # This will raise a TypeError because strings are immutable.
+new_string = 'J' + my_string[1:]  # Create a new string
+print(new_string)  # Output: Jello
+```
+
+**In summary, mastering string manipulation is crucial for processing and working with textual data. Understanding immutability and utilizing tools like format strings will significantly enhance your ability to handle strings effectively in Python.**
+## CS Recitation Notes - String Manipulation
+
+**Key Concepts:**
+
+* **String Input:** When you receive input from a user (e.g., using `input()` in Python or similar functions in other languages), it is *always* returned as a string.
+* **Type Conversion (Type Inversion):** If you need to perform numerical operations on a string that contains a number, you must use a type conversion function (like `int()` in Python) to convert the string into an integer.
+    * **Important:** If the string cannot be converted to an integer (e.g., it contains letters or special characters), a `ValueError` or similar type error will occur.
+* **String Indexing:** You can access individual characters within a string using integer indices.
+    * **Positive Indices:** Start from 0 and represent characters from the beginning of the string.
+    * **Negative Indices:** Start from -1 and represent characters from the end of the string.
+        * -1 refers to the last character, -2 to the second-to-last, and so on.
+* **String Slicing:** A powerful way to extract portions of a string. It uses the syntax `[start:stop:step]`.
+    * **`start` (inclusive):** The index where the slice begins. If omitted, it defaults to 0 (the beginning of the string).
+    * **`stop` (exclusive):** The index where the slice ends. Characters at this index are *not* included in the slice. If omitted, it defaults to the length of the string (the end).
+    * **`step`:** The increment between indices in the slice. If omitted, it defaults to 1 (moving forward one character at a time).
+        * **Positive `step`:** Iterates through the string forward.
+        * **Negative `step`:** Iterates through the string backward.
+* **Special String Value:** `\s` represents a whitespace character (like a space, tab, or newline).
+
+**Examples:**
+
+* **Type Conversion:**
+   ```python
+   string = "42"
+   integer = int(string) # integer will be 42
+   ```
+   ```python
+   string = "hello"
+   integer = int(string) # This will raise a ValueError
+   ```
+* **Indexing:**
+   ```python
+   string = "world"
+   first_char = string[0] # first_char will be 'w'
+   last_char = string[-1] # last_char will be 'd'
+   ```
+* **Slicing:**
+   ```python
+   string = "abcdefg"
+   substring1 = string[0:3] # substring1 will be "abc" (index 0 up to but not including 3)
+   substring2 = string[4:]  # substring2 will be "efg" (from index 4 to the end)
+   substring3 = string[:3]  # substring3 will be "abc" (from the beginning up to but not including index 3)
+   substring4 = string[-3:] # substring4 will be "efg" (last three characters)
+   substring5 = string[::2] # substring5 will be "aceg" (every second character)
+   substring6 = string[1:5:2] # substring6 will be "bdf" (from index 1 to 4, taking every second character)
+   ```
+
+**Additional Notes from Class:**
+
+* **String Functions:** Beyond basic indexing and slicing, there are various built-in string functions available.
+* **Counting Characters:** You can use functions like `count()` to determine the number of occurrences of a specific character within a string (e.g., counting the number of 'o's in "Hello World").
+* **First Index:** The `find()` method can be used to find the index of the first occurrence of a character within a string. If the character is not found, it returns -1.
+* **Equality Comparison:** Unlike some other languages, the `==` operator is safe to use for comparing strings in Python. It checks if two strings are identical.
+* **String Comparison (Lexicographical):** When comparing strings with `==`, Python performs lexicographical comparison, meaning it compares characters from left to right.
+* **Function Definition:** The `def` keyword is used to define functions. You provide a name for the function, followed by parentheses for arguments (which can be empty). The function body is indented below the `def` line.
+* **Function Return Value:** Functions can return values using the `return` statement. If no `return` statement is present, the function implicitly returns `None`.
+* **Function Arguments:** Arguments passed to a function are assigned to parameters defined in the function's parentheses.
+* **String Concatenation:** Python does not automatically convert non-string types to strings during concatenation. You must explicitly use the `str()` function to convert numbers or other data types into strings before using the `+` operator for concatenation.
+* **f-strings (Formatted String Literals):** f-strings provide a convenient way to embed expressions inside string literals. They are denoted by an `f` before the opening quote. Variables and expressions within the curly braces `{}` are evaluated and their string representation is inserted into the string.
+* **Immutability:** Strings in Python are immutable. This means you cannot directly modify an existing string. Instead, you need to create a new string based on the original using slicing and concatenation or other string manipulation techniques.
+* **Indirect String Modification:** To achieve the effect of modifying a string, you create a new string by combining parts of the original string with new characters or substrings.
+
+
+
+**Important Note on Immutability and Modification:** If you need to change a string, you cannot modify it directly. Instead, you'll need to create a new string by slicing the original and adding the desired changes using concatenation or slicing. For example, attempting to assign a value to a specific character within a string will result in a `TypeError`.

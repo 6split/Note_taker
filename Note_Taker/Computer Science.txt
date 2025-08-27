@@ -1,0 +1,40 @@
+## Computer Science Notes - Lecture Outline
+
+**Tuesday, August 26, 2025**
+
+**Topics:**
+
+1. **Strings:** Introduction to the string object type in Python.
+2. **User Input and Output:** Techniques for writing programs that receive input from users and display output.
+3. **Conditional Logic:** Implementing decision-making within programs using user input.
+
+---
+
+### Recap of Last Lecture
+
+* **Objects:** Fundamental building blocks in Python. Each object has a specific type that dictates allowed operations.
+* **Variables:** Names that refer to objects stored in memory.
+* **Expressions:** Combinations of objects and operators that Python evaluates to produce a value.
+    * Mathematical expressions (e.g., `(x + y) * 2`)
+    * Command-like expressions (e.g., `radius ** 2`)
+* **Assignment Statement:** Creates a new object in memory and binds it to a given variable name. The right-hand side of the `=` is evaluated.
+* **Memory Diagram:** Visual representation of objects and their values in memory.
+* **Creating Objects:**  Assigning values to variables creates new objects in memory. Modifying objects does not change the original object, but creates a new one.
+* **String Object:** A sequence of case-sensitive characters.
+
+---
+
+### New Topic: Strings
+
+* **Definition:** A string is a sequence of case-sensitive characters.
+* **Character Types:** Strings can contain a wide variety of characters, including lowercase and uppercase letters, numbers, symbols, and whitespace.
+* **String Literals:** Strings are typically enclosed in single quotes (`'...'`) or double quotes (`"..."`).
+* **String Operations:** Python provides various built-in operations for manipulating strings, such as:
+    * **Concatenation:** Joining two or more strings together.
+    * **Slicing:** Extracting a portion of a string.
+    * **Indexing:** Accessing individual characters within a string.
+    * **String methods:** Functions that perform specific operations on strings (e.g., `upper()`, `lower()`, `strip()`).
+
+
+
+**To be continued...** (The provided transcription ends mid-sentence.)

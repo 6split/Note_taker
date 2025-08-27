@@ -1,0 +1,27 @@
+## Notes: Testing the Note Taker - Initial Functionality
+
+**Objective:** Verify the note-taking system's basic functionality, specifically the progress bar indicator.
+
+**Procedure:**
+
+1. **Initiate Recording:** The instructor begins by stating they are testing the system.
+2. **Observe Progress Bar:** The instructor directs attention to the progress bar, indicating it should be working.
+3. **Test Stopping Mechanism:** The instructor attempts to stop the recording *before* it reaches the end.
+4. **Verify Stop Functionality:** The instructor confirms they are able to stop the recording.
+
+**Key Observations:**
+
+* The progress bar *appears* to be working initially.
+* There is an issue with the progress bar's behavior when the recording is stopped prematurely. The instructor notes it "shouldn't be" working in this scenario.
+* The ability to stop the recording is confirmed.
+
+**Potential Issues:**
+
+* The progress bar may not accurately reflect the recording status when stopped mid-process.
+* There could be a bug in the progress bar logic related to premature stopping.
+
+**Next Steps:**
+
+* Further investigation is needed to understand why the progress bar malfunctions when stopped early.
+* Consider testing with different stopping points to identify the specific conditions causing the issue.
+* Document the observed behavior and any error messages encountered.
